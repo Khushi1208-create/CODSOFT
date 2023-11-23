@@ -19,31 +19,21 @@ int main()
 		cout << "2 for medium!\t";
 		cout << "3 for difficult!\t";
 		cout << "0 for ending the game\n" << endl;
-
-		// select the level of difficulty
 		int q;
 		cout << "Enter the number: ";
 		cin >>q;
 
-		// generating the secret number
+		// To generate the secret number
 		srand(time(0));
-		int sn = 1 + (rand() % 100);
-		int n;
-
-		// Difficulty Level:Easy
+		int sn = 1 + (rand() % 100); //sn is the secret number
+		int n; //n is the number which user will guess
 		if (q == 1) {
 			cout << "\nYou have 10 choices for finding the "
 					"secret number between 1 and 100.";
 			int choiceLeft = 10;
 			for (int i = 1; i <= 10; i++) {
-
-				// prompting the player to guess the secret
-				// number
 				cout << "\n\nEnter the number: ";
 				cin >> n;
-
-				// determining if the playerChoice matches
-				// the secret number
 				if (n == sn) {
 					cout << "Well played! You won"<< endl;
 					break;
@@ -73,21 +63,13 @@ int main()
 				}
 			}
 		}
-
-		// Difficulty level : Medium
 		else if (q == 2) {
 			cout << "\nYou have 7 choices for finding the "
 					"secret number between 1 and 100.";
 			int choicesLeft = 7;
 			for (int i = 1; i <= 7; i++) {
-
-				// prompting the player to guess the secret
-				// number
 				cout << "\n\nEnter the number: ";
 				cin >> n;
-
-				// determining if the playerChoice matches
-				// the secret number
 				if (n == sn) {
 					cout << "Well played! You won"<<endl;
 					break;
@@ -117,20 +99,13 @@ int main()
 				}
 			}
 		}
-		// Difficulty level : Medium
 		else if (q == 3) {
 			cout << "\nYou have 5 choices for finding the "
 					"secret number between 1 and 100.";
 			int choicesLeft = 5;
 			for (int i = 1; i <= 5; i++) {
-
-				// prompting the player to guess the secret
-				// number
 				cout << "\n\nEnter the number: ";
 				cin >> n;
-
-				// determining if the playerChoice matches
-				// the secret number
 				if (n == sn) {
 					cout << "Well played! You won"<<endl;
 					break;
@@ -160,7 +135,6 @@ int main()
 				}
 			}
 		}
-		// To end the game
 		else if (q== 0) {
 			exit(0);
 		}
